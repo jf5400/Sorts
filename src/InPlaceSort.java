@@ -18,13 +18,12 @@ public class InPlaceSort {
         for (int i = 0; i < n-1; i++)
         {
             int min = i;
-            for (int j = i+1; j < n; j++)
-                if (list1[j] < list1[min])
+            for (int j = i+1; j < n; j++) {
+                if (list1[j] < list1[min]) {
                     min = j;
-
-            double temp = list1[min];
-            list1[min] = list1[i];
-            list1[i] = temp;
+                }
+            }
+            swapDouble(list1, min , i);
         }
     }
 
